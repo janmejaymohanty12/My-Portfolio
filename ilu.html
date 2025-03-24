@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay-Folio</title>
+    <link rel="icon" href="./assests//icons/image_icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@hello/type.js@1.0.0/dist/type.js"></script>
+
+    <style>
+        :root {
+            --color-brown: #A02334;
+            --color-badam: #FFAD60;
+            --color-cream: #FFEEAD;
+            --color-light-grey: #96CEB4;
+            --primary-color-light: #F8EDED;
+            --primary-color-dark: #173B45;
+            --secondary-color-light: #FF8225;
+            --secondary-color-dark: #B43F3F;
+            --primary-color-dark-1: #674188;
+            --primary-color-light-1: #E2BFD9;
+            --secondary-color-dark-1: #C8A1E0;
+            --secondary-color-light-1: #F7EFE5;
+           
+           
+           
+           
+           
+            /* --bg-color-intro:;
+            --bg-color-about:;
+            --bg-color-skills:;
+            --bg-color-projects:;
+            --bg-color-blogs:;
+            --bg-color-contact:;
+            --header-text-color:;
+            --card-width:;
+            --profile-img:;
+            --profile-img-width:;
+            --profile-img-height; */
+        }
+
+        * {
+            margin: 0;
+        }
+
+        main {
+            background-color:var(--primary-color-light);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            display: flex;
+            position: sticky;
+            background: radial-gradient(75deg, orange, brown);
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.637);
+            justify-content: start;
+            align-items: center;
+            z-index: 3;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            flex: 8;
+            justify-content: start;
+            align-items: center;
+            height: 90px;
+        }
+
+        .nav-logo {
+            flex:7;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .nav-logo img {
+            width:240px;
+            position: absolute;
+            top: 70px;
+        
+        }
+      
+        .nav a {
+            position: relative;
+            font-size: 18px;
+            margin: 0px 15px;
+            color: var(--primary-color-dark-1);
+            text-decoration: none;
+            transition: .1s ease-in-out;
+        }
+
+        .nav a:hover {
+            color: black;
+            padding: 0px 0 8px 0;
+            /* border-bottom: #FF8225 3px solid;
+            border-top: #FF8225 3px solid;
+            border-radius: 5px; */
+
+        }
+
+
+        .intro {
+            background-image: url("assests/bgIMG.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            height: 550px;
+            border-bottom: 5px solid var(--secondary-color-light);
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .intro-profile {
+            display: flex;
+            position: relative;
+            margin-top: 50px;
+           
+            border-radius: 50%;
+            background-image: url("./assests/bgWhite.png");
+            /* border: 1px solid; */
+            /* overflow: hidden; */
+            /* height: 400px; */
+            /* width: 400px; */
+            
+        }
+
+        .intro-profile div:first-child {
+            background: radial-gradient(rgba(132, 131, 136, 0.616), rgba(255, 166, 0, 0.329));
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            left: 3px;
+            top: 6px;
+        }
+
+        .profile-img img {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 400px;
+            height: 400px;
+        }
+
+        .intro-border {
+            width: 405px;
+            height: 405px;
+            animation: circle;
+            z-index: 2;
+            border-radius: 50%;
+            border-top: 5px solid rgb(187, 172, 177);
+            border-bottom: 3px solid yellow;
+            animation: circle;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            @media only screen and (max-width:900px) {
+                width: 305px;
+                height: 305px;
+            }
+        }
+
+        @keyframes circle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+        .left{
+            padding-top: 90px;
+        }
+
+        .left h1{
+            font-family: cursive;
+            font-size: 48px;
+        }
+        .left h1 span{
+            color: #674188;
+            text-shadow: 5px 5px 10px gold;
+        }
+        .intro-text{
+            position: relative;
+            left: 90px;
+            top: 20px;
+            width: 70ch;
+            line-height: 1.4rem;
+        }
+        .intro-text h2{
+            margin-bottom:15px ;
+        }
+    </style>
+
+    <style>
+        section h1{
+            font-family: cursive;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .skills,.projects{
+            padding: 48px 100px;
+        }
+        .skills-body{
+            display: flex;
+        }
+        .skill-section{
+            flex: 10;
+        }
+        .certification{
+            flex: 5;
+            margin-top: 5px;
+        }
+        .certification h3{
+            color:var(--primary-color-dark-1)
+        }
+        .skill{
+            margin: 10px 0;
+        }
+        .skill h3{
+            color: #674188;
+        }
+        .skill-list img{
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+            padding: 5px;
+            margin-left: 10px;
+            /* border: 1px solid var(--secondary-color-light); */
+            border-radius: 50%;
+            /* transition: .2s ease-in-out; */
+           
+        }
+        .skill-list{
+            display: flex;
+            align-items: center;
+        }
+        .skill-list img:hover{
+            transform: scale(1.4);
+            border: none;
+        }
+        
+        .inline-block{
+            display: inline-block;
+        }
+        .inline-block h5{
+            font-weight: 100;
+            width: 20ch;
+        }
+        .certificate-period{
+            color: rgb(172, 118, 17);
+            font-size: 24px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px var(--color-badam);
+        }
+        .certificate-img{
+            font-size: 12px;
+            height: 50px;
+            margin-left: 30px;
+            overflow: hidden;
+        }
+        .certificate-img:hover{
+            font-size: 12px;
+            height: fit-content;
+        }
+        .certificate-img h4{
+            font-size: 20px;
+        }
+        .certificate{
+            display: flex;
+            margin-top: 20px;
+        }
+        .certificate-img img{
+            margin-top: 20px;
+            height: 280px;
+        }
+
+    </style>
+
+    <style>
+        /* Project */
+        .project-card{
+            display: flex;
+            box-shadow: 1px 2px 5px black;
+            width: 280px;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 20px;
+            flex-direction: column;
+            transition: .2s;
+        }
+        .project-card:hover{
+            transform: scale(1.02);
+        }
+        .project-card img{
+            /* width: 280px; */
+            height: 280px;
+            
+            border-radius: 20px;
+        }
+        .project-img{
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            background-color: black;
+            border-radius:20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-img,.project-links :hover{
+            opacity: 1;
+        }
+        .project-links{
+            position: absolute;
+            border: 5px rgb(230, 225, 221);
+        }
+        .project-links svg{
+            opacity: 0.3;
+            font-size: 64px;
+            fill: pink;
+            margin: 0px 20px;
+            transition: 0.1s ;
+        }
+        .project-links svg:hover{
+            transform: scale(0.9);
+        }
+        .project-tag{
+            background-color: white;
+            color: #674188;
+            width: 10ch;
+            padding: 10px 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 2px 2px 8px gray;
+            position: absolute;
+            z-index: 5;
+            bottom: -10px;
+            text-align: center;
+        }
+        .project-tag:hover{
+            color: #FF8225;
+        }
+        .project-name{
+            font-size: 20px;
+            margin: 15px 0px;
+            color: var(--secondary-color-dark-1);
+        }
+        .project-desc{
+            font-size: 12px;
+            line-height: 1.15rem;
+        }
+        .project-body{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: space-around;
+        }
+        section{
+            margin-top: 90px 0;
+            border-bottom: 4px solid var(--primary-color-dark-1);
+        }
+       
+    </style>
+    <style>
+        /* Contact */
+        .contacts{
+            background-color: var(--primary-color-dark);
+            /* height: 800px; */
+            padding: 64px 100px;
+            /* fill: white; */
+        }
+        .contact svg{ fill:var(--color-brown);
+            width: 60px;
+            height: 60px;
+            margin: 0px 10px
+        }
+    
+        .contacts svg{
+            fill:var(--primary-color-dark-1);
+            width: 60px;
+            height: 60px;
+            margin: 0px 10px;
+        }
+        .contacts svg:hover{
+            fill:var(--secondary-color-light);
+            transform: scale(1.4);
+        }
+         /*.contact-panel{
+            height: 600px;
+            border-radius:20px ;
+            box-shadow: 5px 5px 10px white;
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <main class="fullpage">
+        <header class="nav">
+            <div class="nav-logo"><img src="./assests/my_logo.png" alt=""></div>
+            <nav class="navbar">
+                <a href="#intro">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Project</a>
+                <a href="./assests/resume/RESUME2024.pdf">Resume</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <section id="intro" class="intro">
+            <!-- <img src="./assests/bgIMG.png" width="100%" height="100%" alt=""> -->
+            <div class="left">
+                <h1>👋 Hy, I'm <span>Janmejay Mohanty</span> 🎭
+                </h1>
+                <div class="intro-text">
+                    <h2><span id="typed-text"></span></h2>
+                    <p>I am a versatile individual with a strong interest in multiple areas, not limited to a particular field of knowledge.<br>
+                        <br> My enthusiasm for tackling complex challenges drives my continuous learning and growth in the field of software development.</p>
+                </div>
+
+            </div>
+            <div class="intro-profile">
+                <div class="profile-img">
+                    <img src="./assests/profile.png" alt="" width="100" height="550px">
+                </div>
+                <div class="intro-border"></div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <h1>Skills & Certificates</h1>
+            <div class="skills-body">
+                <div class="skill-section">
+                    <div class="skill">
+                        <h3>Problem Solving</h3>
+                        <div class="skill-list">
+                            <div class="inline-block">
+                                <img src="./assests/solid.jpeg" alt="">
+                                <h5>Solid Desgin Pattern</h5>
+                            </div>
+                            <div class="inline-block">
+                                <img src="./assests/dsa.jpg" alt="">
+                                <h5>Data Structure and Algorithms</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Software Development Life Cycle</h3>
+                        <div class="skill-list">
+                            <span class="inline-block">
+                                <img src="./assests/agile.jpeg" alt="">
+                                <h5>Agile Methodology</h5>
+                            </span>
+                            <span class="inline-block">
+                                <img src="./assests/development_life_cycle.png" alt="">
+                                <h5>Development Cycle</h5>
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="skill">
+                        <h3>Frontend Skills</h3>
+                        <div class="skill-list">
+                            <img src="./assests/html.png" alt="">
+                            <img src="./assests/css.png" alt="">
+                            <img src="./assests/javascript.png" alt="">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Programming Language</h3>
+                        <div class="skill-list">
+                            <img src="./assests/java.png" alt="">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Frameworks</h3>
+                        <div class="skill-list">
+                            <span class="inline-block">
+                                <img src="./assests/icons8-spring-boot-480.svg" alt="">
+                                <h5>Spring Framework</h5>
+                            </span>
+                            <img src="assests/android.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Tools</h3>
+                        <div class="skill-list">
+                            <span class="inline-block">
+                                <img src="./assests/git.png" alt="">
+                                <h5>github</h5>
+                            </span>
+                            <span class="inline-block">
+                                <img src="./assests/vscode.jpeg" alt="">
+                                <h5>vscode</h5>
+                            </span>
+                            <span class="inline-block">
+                                <img src="./assests/android-studio.png" alt="">
+                                <h5>Android Studio</h5>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certification">
+                    <h3><b><u>Extra Curricular Activity</u></b></h3>
+
+                       <h6> <b> <i>With a storied career in the Odia Film Industry spanning many years,
+                       I've had the privilege of portraying notable roles in popular serials
+                       like 'Tejaswini' and 'Kuanri Bohu' on Tarang Channel, as well as 'Shree Jagannath' on Parthana Channel.
+                        My film credits include the acclaimed Odia movie 'Mun Gandhi Nuhe'.Notably, I've received the prestigious Best Actor award nine times at the national level,
+                   a testament to my dedication and passion for my craft.</i></b></h6>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assests\a8.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        <div class="carousel-item">
+                            <img src="assests\a1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assests\a3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                           <div class="carousel-item">
+                            <img src="assests\a2.jpg" class="d-block w-100" alt="...">
+                           </div>
+                           <div class="carousel-item">
+                            <img src="assests\a4.jpg" class="d-block w-100" alt="...">
+                           </div>
+                           <div class="carousel-item">
+                            <img src="assests\a5.jpg" class="d-block w-100" alt="...">
+                           </div>
+                           <div class="carousel-item">
+                            <img src="assests\a9.jpg" class="d-block w-100" alt="...">
+                           </div>  
+                           <div class="carousel-item">
+                            <img src="assests\a10.jpg" class="d-block w-100" alt="...">
+                           </div>
+                           <div class="carousel-item">
+                            <img src="assests\a7.jpg" class="d-block w-100" alt="...">
+                           </div>
+                        
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="project-body">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="./assests/project-img/javafullstack.jpeg">
+                        <div class="project-links">
+                            <a href="https://javafullstack.netlify.app/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href="https://github.com/adisupport/jspider-notes"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">mkdocs</div>
+                    </div>
+                    <div class="project-name">Java-FullStack-Notes</div>
+                    <div class="project-desc">Build and deployed typed note of JAVA, SQL and Web Technology using mkdocs builder and netfliy. 
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://cdn.sanity.io/images/jzo1v0ln/production/49cfc1bdc9a8c6ce52fde6777a3bce87b948858c-1298x603.gif">
+                        <div class="project-links">
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">Python</div>
+                    </div>
+                    <div class="project-name">Snake</div>
+                    <div class="project-desc">Using Python turtle library developed a GUI Snack game,This Project is about LLD Design to understand how to use concepts of OOPS to build a Software.
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://cdn.sanity.io/images/jzo1v0ln/production/c8d7c2733e4e1b8067016d61dd9c05386740fe3e-360x360.jpg">
+                        <div class="project-links">
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">Spring-Boot</div>
+                    </div>
+                    <div class="project-name">E-commerce[Backend]</div>
+                    <div class="project-desc">Design and developed a robut and scalable backend application using Spring Boot Framework following MVC architecture. Implemented multiple microservices to userservice, product cataloging service, and payment service.
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="./assests/project-img/password_manager.gif">
+                        <div class="project-links">
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">Python</div>
+                    </div>
+                    <div class="project-name">Password Manager</div>
+                    <div class="project-desc">Python GUI Application,Purpose of this project is to understand Tkinter Grid System and String processing in Python.
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="./assests/project-img/journel.gif">
+                        <div class="project-links">
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">React</div>
+                    </div>
+                    <div class="project-name">Keeper</div>
+                    <div class="project-desc">Todo List Application Using. 
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="./assests/project-img/gallery.gif">
+                        <div class="project-links">
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M396 512a112 112 0 1 0 224 0 112 112 0 1 0-224 0zm546.2-25.8C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM508 688c-97.2 0-176-78.8-176-176s78.8-176 176-176 176 78.8 176 176-78.8 176-176 176z"></path></svg></a>
+                            <a href=""><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></a>
+                        </div>
+                        <div class="project-tag">MERN</div>
+                    </div>
+                    <div class="project-name">Photo Gallery</div>
+                    <div class="project-desc">It is a simple image gallery store,where we can upload,view,delete.Node,ejs,express and mongoDB ORM mongoose are used to build this project.File handling is the main purpose of the project.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contacts">
+            <div class="contact-panel">
+                <div class="skill">
+                    <h3>Social Profile</h3>
+                    <div class="skill-list">
+                        <div class="inline-block">
+                            <a href="https://www.linkedin.com/in/janmejay-mohanty-a3525230a/">
+                                <img src="./assests/svg/linkedin-1-svgrepo-com.svg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            
+                            <a href="https://www.facebook.com/share/15MjmY5Djg/"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" height="20px" width="20px"></a>
+                            <a href="https://x.com/143Kingofhearts?s=09"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter" height="20px" width="20px"></a>
+                            <a href="https://www.instagram.com/_aawara_ashiq?igsh=MThsZm5vdWh0MG83eQ=="><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" height="20px" width="20px"></a>                        </div>
+                            <div class="inline-block">
+                            <a href="https://github.com/janmejaymohanty12/janmejaymohanty12">
+                                <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                                    <title>github [#142]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs>
+                                
+                                </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]">
+                                
+                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="inline-block">
+                            <a href="mailto:janmejaymohanty12@gmail.com">
+                                <svg fill="#000000" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fill-rule="evenodd"/>
+                                </svg>
+                           </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script async src="https://cdn.jsdelivr.net/npm/@hello/type.js@1.0.0/dist/type.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script defer>
+        console.log("Hello")
+        document.addEventListener('DOMContentLoaded', function () {
+          new Typed('#typed-text', {
+            strings: ['Hello Stranger', 'I am a Software Developer','Sometime Frontend Developer','Sometime Android Developer','Sometime Backend Developer','And full time PROBLEM SOLVER'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+          });
+        });
+      </script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>
